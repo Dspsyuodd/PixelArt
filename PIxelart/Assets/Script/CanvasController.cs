@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class CanvasController : MonoBehaviour
 {
-    public int sizeX, sizeY;
-    
+    public static int sizeX = 10, sizeY = 10;
+
     [SerializeField]
     private GameObject pixel;
+    [SerializeField]
+    private GameObject CanvasStart;
 
     public static Color[,] pixels;
 
+
     private void Start()
     {
-        pixels = new Color[sizeX, sizeY];
+        GameObject holst = Instantiate(CanvasStart, new Vector3(sizeX / 2 - 0.5f, sizeY / 2 - 0.5f, 0f), Quaternion.identity);
+        holst.transform.localScale = new Vector2(sizeX, sizeY);
 
+        pixels = new Color[sizeX, sizeY];
+        
         for (int i = 0; i < sizeX; i++)
             for (int j = 0; j < sizeY; j++)
                 pixels[i, j] = new Color(255f, 255f, 255f);
@@ -22,22 +28,27 @@ public class CanvasController : MonoBehaviour
 
     public Camera cam;
 
-    public static Color pen_color;
-    public static string paint_tool;
+    public static Color pen_color = new Color(255f, 255f, 0f);
+    public static string paint_tool = "Pen";
 
     void Update()
     {
-        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        pos.x = Mathf.Round(pos.x);
-        pos.y = Mathf.Round(pos.y);
-        
-        
-        if (pixels[(int)pos.x, (int)pos.y] == new Color(255f, 255f, 255f))
+        if (Input.GetMouseButton(0))
         {
-            GameObject a = Instantiate(pixel);
-            a.GetComponent<SpriteRenderer>().color = pen_color;
-            pixels[(int)pos.x, (int)pos.y] = pen_color;
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            pos.x = Mathf.Round(pos.x);
+            pos.y = Mathf.Round(pos.y);
+            pos.z = 0f;
+
+            if (pen_color != new Color(255f, 255f, 255f) && pos.x >= 0 && pos.x < sizeX && pos.y >= 0 && pos.y < sizeY)
+            {
+                if (pixels[(int)pos.x, (int)pos.y] == new Color(255f, 255f, 255f))
+                {
+                    GameObject a = Instantiate(pixel, pos, Quaternion.identity);
+                    a.GetComponent<SpriteRenderer>().color = pen_color;
+                    pixels[(int)pos.x, (int)pos.y] = pen_color;
+                }
+            }
         }
     }
-
 }
