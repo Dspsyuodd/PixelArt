@@ -17,10 +17,9 @@ public class CameraController : MonoBehaviour
             isMouseDown = false;
 
         if (isMouseDown)
-            transform.position -= new Vector3(Input.GetAxis("Mouse X") * mouse_sens * Mathf.Abs(transform.position.z / 5), Input.GetAxis("Mouse Y") * mouse_sens * Mathf.Abs(transform.position.z / 5), 0f);
+            transform.position -= new Vector3(Input.GetAxis("Mouse X") * mouse_sens * GetComponent<Camera>().orthographicSize / 2, Input.GetAxis("Mouse Y") * mouse_sens * GetComponent<Camera>().orthographicSize / 2, 0f);
 
         if (Input.GetAxis("Mouse ScrollWheel") != 0)
-            GetComponent<Camera>().orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * mouse_wheel_sesn * Mathf.Abs(GetComponent<Camera>().orthographicSize / 3);
-            //transform.position += transform.forward * Time.deltaTime * Input.GetAxis("Mouse ScrollWheel") * mouse_wheel_sesn * Mathf.Abs(transform.position.z / 2);
+            GetComponent<Camera>().orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * mouse_wheel_sesn * GetComponent<Camera>().orthographicSize;
     }
 }
