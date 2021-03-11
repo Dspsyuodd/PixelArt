@@ -9,8 +9,8 @@ public class PixelRamka : MonoBehaviour
     void Update()
     {
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        pos.x -= pos.x % 1 - 1;
-        pos.y -= pos.y % 1 - 1;
+        pos.x = Mathf.Round(pos.x);
+        pos.y = Mathf.Round(pos.y);
         pos.z = 0;
         transform.position = pos;
     }

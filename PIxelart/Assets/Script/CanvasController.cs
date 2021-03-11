@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CanvasController : MonoBehaviour
 {
-    [SerializeField]
-    private int sizeX, sizeY;
+    public int sizeX, sizeY;
 
-    public GameObject pixel;
+    [SerializeField]
+    private GameObject pixel;
 
     private void Start()
     {
