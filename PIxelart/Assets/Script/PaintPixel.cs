@@ -6,13 +6,31 @@ public class PaintPixel : MonoBehaviour
 {
     private void OnMouseEnter()
     {
-        if (Input.GetMouseButton(0))
-            GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 255f);
+        DrawPixel();
     }
 
     private void OnMouseDown()
     {
+        DrawPixel();
+    }
+
+    private void DrawPixel()
+    {
         if (Input.GetMouseButton(0))
-            GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 255f);
+        {
+            if (CanvasController.paint_tool == "Pen")
+            {
+                GetComponent<SpriteRenderer>().color = CanvasController.pen_color;
+
+            }
+            else if (CanvasController.paint_tool == "Eraser")
+            {
+                Destroy(gameObject);
+            }
+
+            GetComponent<SpriteRenderer>().color = CanvasController.pen_color;
+        }
+
+        CanvasController.pixels[(int)gameObject.transform.position.x, (int)gameObject.transform.position.y] = CanvasController.pen_color;
     }
 }
