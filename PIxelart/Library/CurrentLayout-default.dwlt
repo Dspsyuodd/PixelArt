@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: -9.056604
-    y: 76.98113
+    x: 7.245283
+    y: 49.81132
     width: 1724.3774
     height: 882.1132
   m_ShowMode: 4
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1725
     height: 883
-  m_MinSize: {x: 875, y: 492}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -93,8 +93,8 @@ MonoBehaviour:
     y: 30
     width: 1725
     height: 833
-  m_MinSize: {x: 912, y: 442}
-  m_MaxSize: {x: 22007, y: 10021}
+  m_MinSize: {x: 908, y: 442}
+  m_MaxSize: {x: 22003, y: 10021}
   vertical: 0
   controlID: 142
 --- !u!114 &5
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 39
+  controlID: 63
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,8 +162,8 @@ MonoBehaviour:
     y: 0
     width: 202
     height: 833
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -214,8 +214,8 @@ MonoBehaviour:
     y: 0
     width: 348
     height: 833
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -267,8 +267,8 @@ MonoBehaviour:
     y: 427
     width: 827
     height: 406
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -321,13 +321,13 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 828
-    y: 19
+    x: 834.1132
+    y: 79.69811
     width: 200
     height: 812
   m_ViewDataDictionary: {fileID: 0}
@@ -376,13 +376,13 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1367.5472
-    y: 106.86793
+    x: 1383.8491
+    y: 79.69811
     width: 346
     height: 812
   m_ViewDataDictionary: {fileID: 0}
@@ -414,13 +414,13 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1019.7736
-    y: 106.86793
+    x: 1036.0754
+    y: 79.69811
     width: 346
     height: 812
   m_ViewDataDictionary: {fileID: 0}
@@ -437,19 +437,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Script
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Script
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GitHub\PixelArt\PIxelart
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7e390000
-    m_LastClickedID: 14718
+    m_SelectedIDs: 84390000
+    m_LastClickedID: 14724
     m_ExpandedIDs: 000000007439000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 743900008c48000000000000444900006a390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -550,13 +550,13 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -9.056604
-    y: 534.33966
+    x: 7.245283
+    y: 507.16983
     width: 826
     height: 385
   m_ViewDataDictionary: {fileID: 0}
@@ -642,13 +642,13 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -9.056604
-    y: 106.86793
+    x: 7.245283
+    y: 79.69811
     width: 826
     height: 406
   m_ViewDataDictionary: {fileID: 0}
