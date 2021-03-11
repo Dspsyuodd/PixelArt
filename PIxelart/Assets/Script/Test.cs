@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class Test : MonoBehaviour
 {
     public Text text;
-
+    void tester()
+    {
+        
+    }
     void Start()
     {
         
