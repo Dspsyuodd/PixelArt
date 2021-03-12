@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CanvasController : MonoBehaviour
 {
-    public static int sizeX = 36, sizeY = 15;
+
+    public static int sizeX, sizeY;
 
     [SerializeField]
     private GameObject pixel;
@@ -16,6 +17,8 @@ public class CanvasController : MonoBehaviour
 
     private void Start()
     {
+        print(sizeX);
+        print(sizeY);
         GameObject holst = Instantiate(CanvasStart, new Vector3(sizeX / 2 - 0.5f * (sizeX % 2 == 0 ? 1 : 0), sizeY / 2 - 0.5f * (sizeY % 2 == 0 ? 1 : 0), 0f), Quaternion.identity);
         holst.transform.localScale = new Vector2(sizeX, sizeY);
 
