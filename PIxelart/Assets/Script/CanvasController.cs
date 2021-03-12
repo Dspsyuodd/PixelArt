@@ -7,6 +7,7 @@ public class CanvasController : MonoBehaviour
 {
 
     public static int sizeX = 10, sizeY = 10;
+    public static bool isLoad = false;
 
     [SerializeField]
     private GameObject pixel;
@@ -18,14 +19,40 @@ public class CanvasController : MonoBehaviour
 
     private void Start()
     {
+        if (isLoad)
+        {
+            var a = Resources.Load<TextAsset>("pixelart");
+            a.text.Replace(",", ".");
+            string[] load = a.text.Split();
+            
+
+            int.TryParse(load[0], out sizeX);
+            int.TryParse(load[1], out sizeY);
+
+            pixels = new Color[sizeX, sizeY];
+
+            for (int i = 0; i < sizeX; i++)
+                for (int j = 0; j < sizeY; j++)
+                {
+                    float.TryParse(load[i * (sizeY + 3) + j], out pixels[i, j].r);
+                    float.TryParse(load[i * (sizeY + 3) + j + 1], out pixels[i, j].g);
+                    float.TryParse(load[i * (sizeY + 3) + j + 2], out pixels[i, j].b);
+                    //pixels[i, j].r = float.Parse(load[i * (sizeY + 3) + j]);
+                    //pixels[i, j].g = float.Parse(load[i * (sizeY + 3) + j + 1]);
+                    //pixels[i, j].b = float.Parse(load[i * (sizeY + 3) + j + 2]);
+                }
+        }
+        else
+        {
+            pixels = new Color[sizeX, sizeY];
+
+            for (int i = 0; i < sizeX; i++)
+                for (int j = 0; j < sizeY; j++)
+                    pixels[i, j] = new Color(1f, 1f, 1f);
+        }
+
         GameObject holst = Instantiate(CanvasStart, new Vector3(sizeX / 2 - 0.5f * (sizeX % 2 == 0 ? 1 : 0), sizeY / 2 - 0.5f * (sizeY % 2 == 0 ? 1 : 0), 0f), Quaternion.identity);
         holst.transform.localScale = new Vector2(sizeX, sizeY);
-
-        pixels = new Color[sizeX, sizeY];
-        
-        for (int i = 0; i < sizeX; i++)
-            for (int j = 0; j < sizeY; j++)
-                pixels[i, j] = new Color(1f, 1f, 1f);
     }
 
     public Camera cam;
@@ -72,23 +99,9 @@ public class CanvasController : MonoBehaviour
         infile.Close();
     }
 
-    public void Load()
+    public static void Load()
     {
-        var a = Resources.Load<TextAsset>("pixelart");
-        string[] load = a.text.Split();
-
-        sizeX = int.Parse(load[0]);
-        sizeY = int.Parse(load[1]);
-
-        for (int i = 0; i < sizeX; i++)
-        {
-            for (int j = 0; j < sizeY; j++)
-            {
-                pixels[i, j].r = float.Parse(load[i * (sizeY + 3) + j]);
-                pixels[i, j].g = float.Parse(load[i * (sizeY + 3) + j + 1]);
-                pixels[i, j].b = float.Parse(load[i * (sizeY + 3) + j + 2]);
-            }
-        }
+        
 
     }
 }
