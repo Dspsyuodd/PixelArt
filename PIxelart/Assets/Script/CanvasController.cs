@@ -27,7 +27,6 @@ public class CanvasController : MonoBehaviour
             for (int j = 0; j < sizeY; j++)
                 pixels[i, j] = new Color(1f, 1f, 1f);
     }
-
     public Camera cam;
 
     public static Color pen_color = new Color(1f, 0.5f, 0.7f);
