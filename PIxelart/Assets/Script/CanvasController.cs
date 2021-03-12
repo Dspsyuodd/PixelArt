@@ -5,7 +5,7 @@ using UnityEngine;
 public class CanvasController : MonoBehaviour
 {
 
-    public static int sizeX, sizeY;
+    public static int sizeX = 10, sizeY = 10;
 
     [SerializeField]
     private GameObject pixel;
@@ -31,7 +31,7 @@ public class CanvasController : MonoBehaviour
 
     public Camera cam;
 
-    public static Color pen_color = new Color(255f, 255f, 0f);
+    public static Color pen_color = new Color(0.92f, 0.5f, 0);
     public static string paint_tool = "Pen";
 
     void Update()
