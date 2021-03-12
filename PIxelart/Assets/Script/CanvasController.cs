@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class CanvasController : MonoBehaviour
@@ -48,6 +49,24 @@ public class CanvasController : MonoBehaviour
                     a.GetComponent<SpriteRenderer>().color = pen_color;
                     pixels[(int)pos.x, (int)pos.y] = pen_color;
                 }
+            }
+        }
+    }
+
+    public static void Save()
+    {
+        string path = @"C:\GitHub\PixelArt\PIxelart\Assets"; //путь к файлу
+        string namefile = "pixelart.txt";
+
+        StreamWriter infile = new StreamWriter(path + "/" + namefile);
+
+        infile.WriteLine(sizeX.ToString() + " " + sizeY.ToString());
+
+        for (int i = 0; i < sizeX; i++)
+        {
+            for (int j = 0; j < sizeY; j++)
+            {
+                infile.Write(pixels[i,j] + " ");
             }
         }
     }
