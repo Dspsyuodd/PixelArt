@@ -280,7 +280,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.39001465, y: 0}
+  m_AnchoredPosition: {x: 0.39013672, y: 0}
   m_SizeDelta: {x: 6.7401123, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &72901176
@@ -354,7 +354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -842.8202, y: 346.9}
+  m_AnchoredPosition: {x: -842.8201, y: 346.9}
   m_SizeDelta: {x: -1729.2012, y: -1033.103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &96849450
@@ -489,7 +489,6 @@ GameObject:
   - component: {fileID: 460646672}
   - component: {fileID: 460646671}
   - component: {fileID: 460646674}
-  - component: {fileID: 460646675}
   m_Layer: 5
   m_Name: Pen
   m_TagString: Untagged
@@ -558,7 +557,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 460646672}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 460646674}
+        m_MethodName: ToolChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &460646672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,32 +618,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d26ab311e8eff48b76d9f62dbe6a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &460646675
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460646669}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &483110559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,7 +1012,6 @@ GameObject:
   - component: {fileID: 779390893}
   - component: {fileID: 779390892}
   - component: {fileID: 779390895}
-  - component: {fileID: 779390896}
   m_Layer: 5
   m_Name: Eraser
   m_TagString: Untagged
@@ -1052,7 +1035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -45.299927, y: 192.70001}
+  m_AnchoredPosition: {x: -45.299805, y: 192.70001}
   m_SizeDelta: {x: 38.03212, y: 37.496048}
   m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!114 &779390892
@@ -1097,7 +1080,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 779390893}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 779390895}
+        m_MethodName: ToolChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &779390893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,32 +1141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91fcb36a1ade3e246b5354e11c2b7518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &779390896
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779390890}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1049129627
 GameObject:
   m_ObjectHideFlags: 0

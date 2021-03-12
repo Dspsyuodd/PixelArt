@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CanvasController : MonoBehaviour
 {
-    public static int sizeX = 10, sizeY = 10;
+    public static int sizeX = 36, sizeY = 15;
 
     [SerializeField]
     private GameObject pixel;
@@ -16,7 +16,7 @@ public class CanvasController : MonoBehaviour
 
     private void Start()
     {
-        GameObject holst = Instantiate(CanvasStart, new Vector3(sizeX / 2 - 0.5f, sizeY / 2 - 0.5f, 0f), Quaternion.identity);
+        GameObject holst = Instantiate(CanvasStart, new Vector3(sizeX / 2 - 0.5f * (sizeX % 2 == 0 ? 1 : 0), sizeY / 2 - 0.5f * (sizeY % 2 == 0 ? 1 : 0), 0f), Quaternion.identity);
         holst.transform.localScale = new Vector2(sizeX, sizeY);
 
         pixels = new Color[sizeX, sizeY];
@@ -40,7 +40,7 @@ public class CanvasController : MonoBehaviour
             pos.y = Mathf.Round(pos.y);
             pos.z = 0f;
 
-            if (pen_color != new Color(255f, 255f, 255f) && pos.x >= 0 && pos.x < sizeX && pos.y >= 0 && pos.y < sizeY)
+            if (pen_color != new Color(255f, 255f, 255f) && pos.x >= 0 && pos.x < sizeX && pos.y >= 0 && pos.y < sizeY && paint_tool == "Pen")
             {
                 if (pixels[(int)pos.x, (int)pos.y] == new Color(255f, 255f, 255f))
                 {
