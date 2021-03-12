@@ -13,7 +13,7 @@ public class Set_WH : MonoBehaviour
     {
         CanvasController.sizeY = int.Parse(He.text.ToString());
         CanvasController.sizeX = int.Parse(Wi.text.ToString());
-        print(He.text.ToString());
-        print(Wi.text.ToString());
+        //print(He.text.ToString());
+        //print(Wi.text.ToString());
     } 
 }

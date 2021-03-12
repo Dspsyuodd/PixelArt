@@ -26,10 +26,8 @@ public class PaintPixel : MonoBehaviour
             else if (CanvasController.paint_tool == "Eraser")
             {
                 Destroy(gameObject);
-                CanvasController.pixels[(int)gameObject.transform.position.x, (int)gameObject.transform.position.y] = new Color(255f, 255f, 255f);
+                CanvasController.pixels[(int)gameObject.transform.position.x, (int)gameObject.transform.position.y] = new Color(1f, 1f, 1f);
             }
         }
-
-        //CanvasController.pixels[(int)gameObject.transform.position.x, (int)gameObject.transform.position.y] = CanvasController.pen_color;
     }
 }
