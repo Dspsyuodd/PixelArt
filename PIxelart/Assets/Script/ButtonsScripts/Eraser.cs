@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Eraser : MonoBehaviour
 {
-    private void OnMouseDown()
+    public void ToolChange()
     {
         CanvasController.paint_tool = "Eraser";
-        print("GOOD");
     }
 }

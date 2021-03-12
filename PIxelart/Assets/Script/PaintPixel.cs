@@ -21,16 +21,15 @@ public class PaintPixel : MonoBehaviour
             if (CanvasController.paint_tool == "Pen")
             {
                 GetComponent<SpriteRenderer>().color = CanvasController.pen_color;
-
+                CanvasController.pixels[(int)gameObject.transform.position.x, (int)gameObject.transform.position.y] = CanvasController.pen_color;
             }
             else if (CanvasController.paint_tool == "Eraser")
             {
                 Destroy(gameObject);
+                CanvasController.pixels[(int)gameObject.transform.position.x, (int)gameObject.transform.position.y] = new Color(255f, 255f, 255f);
             }
-
-            GetComponent<SpriteRenderer>().color = CanvasController.pen_color;
         }
 
-        CanvasController.pixels[(int)gameObject.transform.position.x, (int)gameObject.transform.position.y] = CanvasController.pen_color;
+        //CanvasController.pixels[(int)gameObject.transform.position.x, (int)gameObject.transform.position.y] = CanvasController.pen_color;
     }
 }

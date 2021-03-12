@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Pen : MonoBehaviour
 {
-    private void OnMouseDown()
+    public void ToolChange()
     {
         CanvasController.paint_tool = "Pen";
-        print("GOOD");
     }
 }
